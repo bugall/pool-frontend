@@ -1,0 +1,930 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tools - Antpool</title>
+<meta name="keywords" content="antpool,after-sales,service,manual,pool,bitcoin,btc,bitmain,antminer,blockchain,mining">
+<meta name="description" content="The antpool support page is the official manual of antpool, including features, support downloads, tech specs, and tutorials">
+ 
+
+
+<meta charset="UTF-8" />
+<title>AntPool</title>
+<link rel="stylesheet" href="/css/fresh-coin/get-your-icon.css">
+
+<link rel="icon" href="/skin/frontend/base/default/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="/skin/frontend/base/default/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="/css/user/bootstrap.min.css?v=1" />
+<link rel="stylesheet" href="/css/user/font-awesome.min.css?v=1" />
+<link rel="stylesheet" href="/css/user/animate.min.css?v=1" />
+<link rel="stylesheet" href="/css/user/skin.css?v=1"/>
+<link rel="stylesheet" href="/css/user/style.css?v=1"/>
+<link rel="stylesheet" href="/css/user/panel.css?v=1" />
+<link rel="stylesheet" href="/css/user/pace.css?v=1" />
+<link rel="stylesheet" href="/css/user/offline.css?v=1" />
+<link rel="stylesheet" href="/css/user/products.css?v=1">
+<link rel="stylesheet" href="/css/antpool/style.css?v=1">
+<link rel="stylesheet" href="/css/antpool/home.css?v=1">
+<link rel="stylesheet" href="/css/indexhome.css?v=1">
+
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+<script src="/js/jquery-3.2.1.min.js"></script>
+<script src="/js/antpool/jquery-1.11.1.min.js" type="text/javascript"></script>
+<script src="/js/My97DatePicker/WdatePicker.js"></script>
+<script src="/js/user/bootstrap.js"></script>
+<script src="/js/user/jquery.bootstrap-growl.min.js"></script>
+<script src="/js/user/bootstrap-alert.js"></script>
+<script src="/js/systemtools.js"></script>
+<script src="/js/user/products.js"></script>
+<script src="/js/math_base.js"></script>
+<script src="/js/user/coin.js"></script>
+<script src="/js/NumberFormat.js"></script>
+<script src="/js/antpool/systemtools.js"></script>
+<script src="/js/antpool/home.js"></script>
+<script src="/js/antpool/jquery.SuperSlide.js"></script>
+
+
+<script type="text/javascript">
+if(self != top){
+	top.location.href=self.location.href;
+} 
+</script> 
+
+<link rel="stylesheet" href="/css/tools/toolsPage_en.css">
+
+</head>
+<body>
+	<div class="app horizontal">
+		
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+var systemWebType = '3';
+var spit_username = "";
+function GetQueryString(name)
+{
+     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+     var r = window.location.search.substr(1).match(reg);
+     if(r!=null)return  unescape(r[2]); return null;
+}
+
+function browserRedirect() {  
+	
+    var sUserAgent = navigator.userAgent.toLowerCase();  
+    var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";  
+    var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";  
+    var bIsMidp = sUserAgent.match(/midp/i) == "midp";  
+    var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";  
+    var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";  
+    var bIsAndroid = sUserAgent.match(/android/i) == "android";  
+    var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";  
+    var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";  
+   
+    //判断访问设备是否为手持终端
+    if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {  
+    	//alert("1");
+        
+    } 
+  	//$("#iosApp_cn").attr("click","downloadApp()");
+    //$("#iosApp_en").attr("click","downloadApp()");
+    //$("#androidApp_cn").attr("click","downloadApp()");
+    //$("#androidApp_en").attr("click","downloadApp()");
+}  
+
+browserRedirect(); 
+
+function downloadApp(type) {
+	var sUserAgent = navigator.userAgent.toLowerCase();  
+    var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";  
+    var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";  
+    var bIsMidp = sUserAgent.match(/midp/i) == "midp";  
+    var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";  
+    var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";  
+    var bIsAndroid = sUserAgent.match(/android/i) == "android";  
+    var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";  
+    var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";  
+   
+    //判断访问设备是否为手持终端
+    if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {  
+    	if(sUserAgent.match(/MicroMessenger/i)!="micromessenger") {  
+        	var isAndroid = sUserAgent.indexOf('android') > -1 || sUserAgent.indexOf('adr') > -1; //android终端
+    	    var isiOS = !!sUserAgent.match(/\(i[^;]+;( u;)? cpu.+mac os x/); //ios终端
+    	    //if(isiOS){
+    	    if(type=='ios'){
+    	    	location.href = "https://itunes.apple.com/cn/app/antpool/id1231387453?mt=8";
+    	    }
+    	    //if(isAndroid){
+    	    if(type=='android'){
+    	    	location.href = "https://www.antpool.com/app/antPool-v2.2.3.apk";
+    	    }
+        } 
+    } 
+    
+}
+
+function f_switch_user(_userId) {
+		_userId = encodeURI(_userId);
+		_userId = _userId.replace(/\+/g,'%2B');
+		//var nowlocation = window.location.href;
+		var nowlocation = "/user/dashboard.htm";
+		var paramIndex = nowlocation.indexOf("?");
+		if(paramIndex != "-1") {
+			nowlocation = nowlocation.substring(0, paramIndex);
+		}
+		nowlocation = nowlocation + "?userId="+_userId;
+		
+		window.location.href = nowlocation;
+	}
+function f_switch_user_antrouter(_userId) {
+		_userId = encodeURI(_userId);
+		_userId = _userId.replace(/\+/g,'%2B');
+		//var nowlocation = window.location.href;
+		var nowlocation = "/user/antRouter.htm";
+		var paramIndex = nowlocation.indexOf("?");
+		if(paramIndex != "-1") {
+			nowlocation = nowlocation.substring(0, paramIndex);
+		}
+		nowlocation = nowlocation + "?userId="+_userId;
+		
+		window.location.href = nowlocation;
+	}
+
+	$(function() {
+		top_get_data("/");
+	});
+	function top_get_data(baseUrl) {
+		$.ajax({
+			url: baseUrl+'webService.htm',
+			type: 'GET',
+			dataType: 'json',
+			success: function(data) {
+				$("#btcPoolHashrateSpan").html(data.Data.homeForm.poolHashrateTitle);
+				$("#ltcPoolHashrateSpan").html(data.Data.homeForm.ltcPoolHashrateTitle);
+				$("#ethPoolHashrateSpan").html(data.Data.homeForm.ethPoolHashrateTitle);
+				$("#etcPoolHashrateSpan").html(data.Data.homeForm.etcPoolHashrateTitle);
+				$("#zecPoolHashrateSpan").html(data.Data.homeForm.zecPoolHashrateTitle);
+				$("#dashPoolHashrateSpan").html(data.Data.homeForm.dashPoolHashrateTitle);
+				$("#bccPoolHashrateSpan").html(data.Data.homeForm.bccPoolHashrateTitle);
+				$("#scPoolHashrateSpan").html(data.Data.homeForm.scPoolHashrateTitle);
+				$("#xmrPoolHashrateSpan").html(data.Data.homeForm.xmrPoolHashrateTitle);
+				$("#btmPoolHashrateSpan").html(data.Data.homeForm.btmPoolHashrateTitle);
+				var networkDiff;
+				var blockNumber;
+				if('' == 'BTC'){
+					networkDiff = data.Data.difficultyValue;
+					blockNumber = data.Data.btcBlockNum;
+				}else if('' == 'LTC'){
+					networkDiff = data.Data.ltcDifficultyValue;
+					blockNumber = data.Data.ltcBlockNum;
+				}else if('' == 'ETH'){
+					networkDiff = data.Data.ethDifficultyValue;
+					blockNumber = data.Data.ethBlockNum;
+				}else if('' == 'ETC'){
+					networkDiff = data.Data.etcDifficultyValue;
+					blockNumber = data.Data.etcBlockNum;
+				}else if('' == 'ZEC'){
+					networkDiff = data.Data.zecDifficultyValue;
+					blockNumber = data.Data.zecBlockNum;
+				}else if('' == 'DAS'){
+					networkDiff = data.Data.dashDifficultyValue;
+					blockNumber = data.Data.dashBlockNum;
+				}else if('' == 'BCC'){
+					networkDiff = data.Data.bccDifficultyValue;
+					blockNumber = data.Data.bccBlockNum;
+				}else if('' == 'SC'){
+					networkDiff = data.Data.scDifficultyValue;
+					blockNumber = data.Data.scBlockNum;
+				}else if('' == 'XMR'){
+					networkDiff = data.Data.xmrDifficultyValue;
+					blockNumber = data.Data.xmrBlockNum;
+				}else if('' == 'BTM'){
+					networkDiff = data.Data.btmDifficultyValue;
+					blockNumber = data.Data.btmBlockNum;
+				}else{
+					networkDiff = data.Data.difficultyValue;
+					blockNumber = data.Data.btcBlockNum;
+				}
+				$("#networkDiffSpan").html(networkDiff);
+				$("#blockNumberSpan").html(blockNumber);
+			},
+			error: function() {
+			}
+		});
+	}
+	
+	function setCoinTypeToSession(coinType){
+		$.ajax({
+			url: '/webService.htm?m=setCoinType&coinType='+coinType,
+			type: 'GET',
+			dataType: 'json',
+			success: function(data) {
+				location.reload();
+			},
+			error: function() {
+			}
+		});
+	}
+</script>
+<script type="text/javascript">
+$(function(){
+	$(".btnChoose").on("click", function(){
+		if( $(".topNavigation .list").hasClass("hide") ){
+			$(".topNavigation .list").removeClass("hide");
+		}else{
+			$(".topNavigation .list").addClass("hide");
+		}
+	});
+	
+	if($("li[tab-id='BTC']")){
+		$("li[tab-id='BTC']").addClass("current");
+		$(".BTCBox").show();
+
+		$(".subTab li").on("click", function(){
+			var tabId = $(this).attr("tab-id");
+			$(this).addClass("current").siblings("li").removeClass("current");
+			$("."+tabId+"Box").show().siblings("div").hide();
+		});
+	}
+	
+	//币种点击事件
+	var listLis = $(".topNavigation .list").find("li");
+	if('' == 'BTC'){
+		$(".btnChoose").find("span").text("Bitcoin");
+		$(".Bitcoin").show().siblings("i").hide();
+		$("li[tab-id='BTC']").addClass("current").siblings("li").removeClass("current");
+		$(".BTCBox").show().siblings("div").hide();
+	}else if('' == 'LTC'){
+		$(".btnChoose").find("span").text("Litecoin");
+		$(".Litecoin").show().siblings("i").hide();
+		$("li[tab-id='LTC']").addClass("current").siblings("li").removeClass("current");
+		$(".LTCBox").show().siblings("div").hide();
+	}else if('' == 'ETH'){
+		$(".btnChoose").find("span").text("Ethereum");
+		$(".Ethereum").show().siblings("i").hide();
+		$("li[tab-id='ETH']").addClass("current").siblings("li").removeClass("current");
+		$(".ETHBox").show().siblings("div").hide();
+	}else if('' == 'ETC'){
+		$(".btnChoose").find("span").text("ETC");
+		$(".EthereumClassic").show().siblings("i").hide();
+		$("li[tab-id='ETC']").addClass("current").siblings("li").removeClass("current");
+		$(".ETCBox").show().siblings("div").hide();
+	}else if('' == 'ZEC'){
+		$(".btnChoose").find("span").text("Zcash");
+		$(".Zcash").show().siblings("i").hide();
+		$("li[tab-id='ZEC']").addClass("current").siblings("li").removeClass("current");
+		$(".ZECBox").show().siblings("div").hide();
+	}else if('' == 'DAS'){
+		$(".btnChoose").find("span").text("Dash");
+		$(".Dash").show().siblings("i").hide();
+		$("li[tab-id='DASH']").addClass("current").siblings("li").removeClass("current");
+		$(".DASHBox").show().siblings("div").hide();
+	}else if('' == 'BCC'){
+		$(".btnChoose").find("span").text("BCH");
+		$(".Bcc").show().siblings("i").hide();
+		$("li[tab-id='BCC']").addClass("current").siblings("li").removeClass("current");
+		$(".BccBox").show().siblings("div").hide();
+	}else if('' == 'SC'){
+		$(".btnChoose").find("span").text("Siacoin");
+		$(".Sc").show().siblings("i").hide();
+		$("li[tab-id='SC']").addClass("current").siblings("li").removeClass("current");
+		$(".ScBox").show().siblings("div").hide();
+	}else if('' == 'XMR'){
+		$(".btnChoose").find("span").text("XMC");
+		$(".Xmr").show().siblings("i").hide();
+		$("li[tab-id='XMR']").addClass("current").siblings("li").removeClass("current");
+		$(".XmrBox").show().siblings("div").hide();
+	}else if('' == 'BTM'){
+		$(".btnChoose").find("span").text("Bytom");
+		$(".Btm").show().siblings("i").hide();
+		$("li[tab-id='BTM']").addClass("current").siblings("li").removeClass("current");
+		$(".BtmBox").show().siblings("div").hide();
+	}else{
+		$(".btnChoose").find("span").text("Bitcoin");
+		$(".Bitcoin").show().siblings("i").hide();
+		$("li[tab-id='BTC']").addClass("current").siblings("li").removeClass("current");
+		$(".BTCBox").show().siblings("div").hide();
+	}
+	
+	$.each(listLis, function(i,v){
+		$(v).on("click", function(){
+			var txt = $(v).text();
+			
+			$(".btnChoose").find("span").text(txt);
+			$("."+txt).show().siblings("i").hide();
+			
+			$(".topNavigation .list").addClass("hide");
+		});
+	});
+});
+</script>
+<div class="topNavigationMain">
+<div class="topNavigation">
+			<ul style="float:left;">
+				<li style="padding-left:0px;">
+					<div class="btnChoose">
+						<i class="icon Bitcoin">
+							<img src="/images/user/bitcoin.png" />
+						</i>
+						<i class="icon Litecoin">
+							<img src="/images/user/ltc_20_20.png" />
+						</i>
+						<i class="icon Ethereum">
+							<img src="/images/user/eth_20_20.png" />
+						</i>
+                        <i class="icon EthereumClassic">
+                            <img src="/images/user/etc_20_20.png" />
+                        </i>
+						<i class="icon Zcash">
+							<img src="/images/user/zec_20_20.png" />
+						</i>
+                        <i class="icon Dash">
+                            <img src="/images/user/dash_20_20.png" />
+                        </i>
+                        <i class="icon Bcc">
+                            <img src="/images/user/bch_20_20.png" />
+                        </i>
+                        <i class="icon Sc">
+                            <img width="20px" height="20px" src="/images/user/sc_20_20.png" />
+                        </i>
+                        <i class="icon Xmr">
+                            <img src="/images/user/xmr_20_20.png" />
+                        </i>
+                        <i class="icon Btm">
+                            <img src="/images/user/btm_20_20.png" />
+                        </i>
+						<span style="color: white;">
+							Bitcoin
+						</span>
+					</div>
+					<ul class="list hide">
+						<li data-id="B" onclick="setCoinTypeToSession('BTC');"><img src="/images/user/bitcoin.png" />&nbsp;Bitcoin</li>
+						<li data-id="L" onclick="setCoinTypeToSession('LTC');"><img src="/images/user/ltc_20_20.png" />&nbsp;Litecoin</li>
+						<li data-id="E" onclick="setCoinTypeToSession('ETH');"><img src="/images/user/eth_20_20.png" />&nbsp;Ethereum</li>
+                        <li data-id="EC" onclick="setCoinTypeToSession('ETC');"><img src="/images/user/etc_20_20.png" />&nbsp;ETC</li>
+						<li data-id="Z" onclick="setCoinTypeToSession('ZEC');"><img src="/images/user/zec_20_20.png" />&nbsp;Zcash</li>
+                        <li data-id="D" onclick="setCoinTypeToSession('DAS');"><img src="/images/user/dash_20_20.png" />&nbsp;Dash</li>
+                        <li data-id="BC" onclick="setCoinTypeToSession('BCC');"><img src="/images/user/bch_20_20.png" />&nbsp;BCH</li>
+                        <li data-id="S" onclick="setCoinTypeToSession('SC');"><img width="20px" height="20px" src="/images/user/sc_20_20.png" />&nbsp;Siacoin</li>
+                        <li data-id="X" onclick="setCoinTypeToSession('XMR');"><img src="/images/user/xmr_20_20.png" />&nbsp;XMC</li>
+                        <li data-id="BTM" onclick="setCoinTypeToSession('BTM');"><img src="/images/user/btm_20_20.png" />&nbsp;Bytom</li>
+					</ul>
+				</li>
+			</ul>
+		     <div class="cointype-con">
+                    <a href="javascript:void(0);" onclick="setCoinTypeToSession('BTC');" data-toggle="dropdown">
+                        <span style="color: white;font-size: 12px;">BTC:<span id="btcPoolHashrateSpan"></span></span>
+                    </a>
+                    <a href="javascript:void(0);" onclick="setCoinTypeToSession('BCC');" data-toggle="dropdown">
+                        <span style="color: white;font-size: 12px;">BCH:<span id="bccPoolHashrateSpan"></span></span>
+                    </a>
+                    <a href="javascript:void(0);" onclick="setCoinTypeToSession('LTC');" data-toggle="dropdown">
+                        <span style="color: white;font-size: 12px;">LTC:<span id="ltcPoolHashrateSpan"></span></span>
+                    </a>
+                    <a href="javascript:void(0);" onclick="setCoinTypeToSession('ETH');" data-toggle="dropdown">
+                        <span style="color: white;font-size: 12px;">ETH:<span id="ethPoolHashrateSpan"></span></span>
+                    </a>
+                    <a href="javascript:void(0);" onclick="setCoinTypeToSession('ETC');" data-toggle="dropdown">
+                        <span style="color: white;font-size: 12px;">ETC:<span id="etcPoolHashrateSpan"></span></span>
+                    </a>
+                    <a href="javascript:void(0);" onclick="setCoinTypeToSession('ZEC');" data-toggle="dropdown">
+                        <span style="color: white;font-size: 12px;">ZEC:<span id="zecPoolHashrateSpan"></span></span>
+                    </a>
+                    <a href="javascript:void(0);" onclick="setCoinTypeToSession('DAS');" data-toggle="dropdown">
+                        <span style="color: white;font-size: 12px;">DASH:<span id="dashPoolHashrateSpan"></span></span>
+                    </a>
+                    <a href="javascript:void(0);" onclick="setCoinTypeToSession('SC');" data-toggle="dropdown">
+                        <span style="color: white;font-size: 12px;">SC:<span id="scPoolHashrateSpan"></span></span>
+                    </a>
+                    <a href="javascript:void(0);" onclick="setCoinTypeToSession('XMR');" data-toggle="dropdown">
+                        <span style="color: white;font-size: 12px;">XMC:<span id="xmrPoolHashrateSpan"></span></span>
+                    </a>
+                    <a href="javascript:void(0);" onclick="setCoinTypeToSession('BTM');" data-toggle="dropdown">
+                        <span style="color: white;font-size: 12px;">BTM:<span id="btmPoolHashrateSpan"></span></span>
+                    </a>
+             </div>
+		
+	
+		
+</div>
+</div>
+<div class="top" >
+          <div class="top_main" >
+               <div id="logo" ><a href="">
+               
+               	
+               	
+               	<img src="/images/antpool/logo@2x.png" id="home_logo" width="170" height="53" alt="AntPool"  />
+               
+               </a></div>
+                <div id="nav">
+                    <ul class="daohangul" style="padding-left: 10px;">
+						<li><a href="/home.htm" >Home</a> </li>
+						
+						<li><a href="/poolStats.htm" >Statistics</a></li>
+						
+						
+							<li><a href="/download.htm?m=tools" target="_blank"  class="active">Tools</a></li>
+                            <li><a href="/announcementList.htm" target="_blank" >Announcement</a></li>
+	                       <div class="btn-group" style="margin-left:-5px;">
+	                            <a data-toggle="dropdown" />Help  <img src="/images/antpool/icon-arrow-down.png" ></a> 
+	                             <ul class="dropdown-menu ddlselect helpsuppt" role="menu">
+	                                    <li><a href="/support.htm">Support</a></li>
+	                                    <li><a href="/user/apiGuild.htm">API Guide</a></li>
+                                        <li><a href="/earnComparison.htm">BTC/BCH Earn Comparison</a></li>
+                                        <li><a href="/support.htm?m=ppsEarn">About PPS+</a></li>
+	                                    <li><a href="/support.htm?m=calculator">Mining Calculator</a></li>
+                                        <li><a href="/download.htm?m=tools" target="_blank">Tools</a> </li>
+                                        <li><a href="/coinbase.htm">Block Sign</a></li>
+                                       
+	                                    <li><a href="https://forum.bitmain.com/">BITMAIN TALK</a></li>
+	                                    <li><a href="/support.htm?m=version">What's new</a></li>
+	                             </ul>
+	                      	</div>
+                      	
+                      	
+                      	<li class="eosantpool">
+							
+							<a href="http://www.eosantpool.com?language=EN" target="_blank">
+                      			EosAntPool
+                      			<img src="/images/icon-hot.png">
+                      		</a>
+                      	</li>
+                    </ul>
+                </div>
+                
+	             <div class="top_right">
+	                
+                    <div class="ver_line"></div>
+                    <div class="info">
+                    	
+                         <div class="email btn-group">
+                         	 
+                         	 	  <a data-toggle="dropdown" >
+                         	 	  <div class="headinfo"> <img src="/images/antpool/icon-user-24.png" ></div>
+                         	 	  <span id="user"  class="en" ></span> &nbsp;
+                         	 	  <span class="sanjiao_img" style="margin-top:15px;"></span>
+                         	 	  </a>
+                         	      <ul  class="dropdown-menu ddlselect userst" role="menu">
+                                     <li><a href="/user/dashboard.htm">Login</a></li>
+                                     
+										<li><a href="https://account.bitmain.com/sign_up">Register</a></li>
+									 
+                                  </ul>
+                         	 
+                         	 
+                         </div> 
+                         
+                         <div class="btn-group m-t-10"  >
+                                
+									
+									
+									
+										<div class="language" data-toggle="dropdown">EN</div>
+									
+								
+                                 <ul  class="dropdown-menu ddlselect lngst " role="menu">
+                                     <li><a href="javascript:f_local_language('/', 'en');"> English </a></li>
+									 <li><a href="javascript:f_local_language('/', 'zh');"> 简体中文 </a></li>
+									 <li><a href="javascript:f_local_language('/', 'ru');" > русский</a></li>
+								</ul>
+                         </div>
+                    </div>
+	                </div>
+                
+          </div>
+   </div>
+   
+
+		<section class="layout">
+		  <!-- toolsPage start -->
+          <div class="toolsPage-container-out">
+            <div class="toolsPage-container">
+              <div class="banner-container box">
+    
+                <div id="carousel-generic" class="carousel slide" data-ride="carousel">
+                  <ol class="carousel-indicators">
+                    <li data-target="#carousel-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-generic" data-slide-to="1"></li>
+                  </ol>
+                  <div class="carousel-inner" role="listbox">
+    
+                    <div class="item active">
+                      <div class="banner-container">
+                        <div class="banner-box"><img src="/images/tools/en/banner01.jpg" alt="banner01" width="580px"></div>
+                        <div class="content-box">
+                          <div style="overflow: hidden;">
+                            <h2>AntPool APP V3.0</h2>
+                            <span class="new-version">New Version</span>
+                          </div>
+                          <div class="qr-code-contaner">
+                            <div class="qr-code-box">
+                              <img src="/images/active/downloadApp/downloadApp_en.png" style="height: 148px;width: 145px;">
+                              <p>ScanTo Download APP</p>
+                            </div>
+                            <div class="info-text-box">
+                              <p>Support Multi-Mining, Manage Multi-Accountst</p>
+                              <p>Guarantee Clients’ Safety, Fair Earnings, Transparency</p>
+                              <span class="ph-coin-box">
+                                <img src="/images/tools/en/iphone-icon.png" alt="">
+                                <span>iPhone</span>
+                              </span>
+                              <span class="ph-coin-box">
+                                <img src="/images/tools/en/android-icon.png" alt="">
+                                <span>Android</span>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+    
+                    <div class="item">
+                      <div class="banner-container bg">
+                        <div class="banner-box"><img src="/images/tools/en/banner02.jpg" alt="banner02" width="640px"></div>
+                        <div class="content-box">
+                          <div style="overflow: hidden;">
+                            <h2 style="font-size: 28px;">APMinerTool V1.0.6</h2>
+                          </div>
+                          <div class="banner02-infoText-box">
+                            <div class="infoText-item">
+                              <p>Accurate and Efficient Miners Management</p>
+                              <span>IP Range</span>
+                              <span class="middle-text">Miner Status</span>
+                              <span>Hashrate </span>
+                            </div>
+                            <div class="infoText-item">
+                              <p>Quick and Simple Configuration</p>
+                              <span>Coin</span>
+                              <span class="middle-text">Worker IP</span>
+                              <span>Pool Address</span>
+                            </div>
+                          </div>
+                          <button type="button" class="btn btn-default down" onclick="downMonitor();">Download</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+    
+              </div>
+    
+              <div class="tools-container">
+                <div class="container-inner">
+    
+                  <div class="tool-box box">
+    
+                    <div class="add-mark-box">
+                      <span class="add-mark01 add-mark">
+                        <span class="dot-mark"></span>
+                      </span>
+                      <span class="add-mark02 add-mark"></span>
+                      <span class="coin-icon">
+                        COIN
+                      </span>
+                      <span class="coin-icon icon01">
+                        <img src="/images/tools/en/btc.png" alt="" title="BTC">
+                      </span>
+                      <span class="coin-icon icon02">
+                        <img src="/images/tools/en/bch.png" alt="" title="BCH">
+                      </span>
+                      <span class="coin-icon icon03">
+                        <img src="/images/tools/en/ltc.png" alt="" title="LTC">
+                      </span>
+                      <span class="coin-icon icon04">
+                        <img src="/images/tools/en/dash.png" alt="" title="DASH">
+                      </span>
+                      <span class="coin-icon icon05">
+                        <img src="/images/tools/en/zec.png" alt="" title="ZEC">
+                      </span>
+                      <span class="coin-icon icon06">
+                        <img src="/images/tools/en/eth.png" alt="" title="ETH">
+                      </span>
+                      <span class="coin-icon icon07">
+                        <img src="/images/tools/en/etc.png" alt="" title="ETC">
+                      </span>
+                      <span class="coin-icon icon08">
+                        <img src="/images/tools/en/sc.png" alt="" title="SC">
+                      </span>
+                    </div>
+    
+                    <div>
+                      <img src="/images/tools/en/tools01.jpg" alt="" width="388px">
+                    </div>
+                    <div class="info-box">
+                      <h3>AntPool APP V3.0</h3>
+                      <div class="text-box">
+                        <div class="text-box-inner">
+                          <p>Real-Time Hashrate Monitor, Efficient </p>
+                          <p>Workers’Changes, Sub-Account Control.</p>
+                          <p><a href="/download/tools/001-APP-en.pdf" target="_blank" class="light-text">APP Instructions</a></p>
+                        </div>
+                      </div>
+                      <div class="over-mark"></div>
+                    </div>
+                    <div class="img-box">
+                      <img src="/images/active/downloadApp/downloadApp_en.png" style="height: 100px;width: 98px;">
+                    </div>
+                  </div>
+    
+                  <div class="tool-box box">
+    
+                    <div class="add-mark-box">
+                      <span class="add-mark01 add-mark">
+                        <span class="dot-mark"></span>
+                      </span>
+                      <span class="add-mark02 add-mark"></span>
+                      <span class="coin-icon">
+                        COIN
+                      </span>
+                      <span class="coin-icon icon01">
+                    <img src="/images/tools/btc.png" alt="" title="BTC">
+                  </span>
+                  <span class="coin-icon icon02">
+                    <img src="/images/tools/bch.png" alt="" title="BCH">
+                  </span>
+                  <span class="coin-icon icon03">
+                    <img src="/images/tools/ltc.png" alt="" title="LTC">
+                  </span>
+                  <span class="coin-icon icon04">
+                    <img src="/images/tools/dash.png" alt="" title="DASH">
+                  </span>
+                  <span class="coin-icon icon05">
+                    <img src="/images/tools/zec.png" alt="" title="ZEC">
+                  </span>
+                  <span class="coin-icon icon06">
+                    <img src="/images/tools/eth.png" alt="" title="ETH">
+                  </span>
+                  <span class="coin-icon icon07">
+                    <img src="/images/tools/etc.png" alt="" title="ETC">
+                  </span>
+                  <span class="coin-icon icon08">
+                    <img src="/images/tools/sc.png" alt="" title="SC">
+                  </span>
+                  <span class="coin-icon icon09">
+                    <img src="/images/tools/xmc.png" alt="" title="XMC">
+                  </span>
+                  <span class="coin-icon icon10">
+                    <img src="/images/tools/btm.png" alt="" title="BTM">
+                  </span>
+                    </div>
+    
+                    <div>
+                      <img src="/images/tools/en/tools02.jpg" alt="" width="388px">
+                    </div>
+                    <div class="info-box">
+                      <h3>APMinerTool V1.0.6</h3>
+                      <div class="text-box">
+                        <div class="text-box-inner">
+                          <p>Monitor software for mining farms. Batch monitor and manage miners, scan LAN miners’ IP simultaneously, batch upgrade firmware and restart miners in bulk.</p>
+                          <p><a href="/download/tools/002-BulkManagement-en.pdf" target="_blank" class="light-text">User Guide</a></p>
+                        </div>
+                      </div>
+                      <div class="over-mark"></div>
+                    </div>
+                    <div class="btn-box">
+                      <button type="button" class="btn btn-default" onclick="downMonitor();">Download</button>
+                    </div>
+                  </div>
+    
+                  <div class="tool-box box">
+    
+                    <div class="add-mark-box">
+                      <span class="add-mark01 add-mark">
+                        <span class="dot-mark"></span>
+                      </span>
+                      <span class="add-mark02 add-mark"></span>
+                      <span class="coin-icon">
+                        COIN
+                      </span>
+                      <span class="coin-icon icon01">
+                        <img src="/images/tools/btc.png" alt="" title="BTC">
+                      </span>
+                      <span class="coin-icon icon02">
+                        <img src="/images/tools/bch.png" alt="" title="BCH">
+                      </span>
+                      <span class="coin-icon icon03">
+                        <img src="/images/tools/ltc.png" alt="" title="LTC">
+                      </span>
+                      <span class="coin-icon icon04">
+                        <img src="/images/tools/dash.png" alt="" title="DASH">
+                      </span>
+                      <span class="coin-icon icon05">
+                        <img src="/images/tools/zec.png" alt="" title="ZEC">
+                      </span>
+                      <span class="coin-icon icon06">
+                        <img src="/images/tools/eth.png" alt="" title="ETH">
+                      </span>
+                      <span class="coin-icon icon07">
+                        <img src="/images/tools/etc.png" alt="" title="ETC">
+                      </span>
+                      <span class="coin-icon icon08">
+                        <img src="/images/tools/sc.png" alt="" title="SC">
+                      </span>
+                    </div>
+    
+                    <div>
+                      <img src="/images/tools/en/tools03.jpg" alt="" width="388px">
+                    </div>
+                    <div class="info-box">
+                      <h3>Worker IP Configuration Tools V1.0</h3>
+                      <div class="text-box">
+                        <div class="text-box-inner">
+                          <p>Efficient Worker IP Management, Quick Bulk Configuration.</p>
+                          <p><a href="/download/tools/IP_Reporter_IP_Tools-en.docx" class="light-text">IP Reporter/Tools Manual</a></p>
+                        </div>
+                      </div>
+                      <div class="over-mark"></div>
+                    </div>
+                    <div class="btn-box">
+                      <button type="button" class="btn btn-default" onclick="downIPConfig();">Download</button>
+                    </div>
+                  </div>
+    
+                  <div class="tool-box box">
+    
+                    <div class="add-mark-box">
+                      <span class="add-mark01 add-mark">
+                        <span class="dot-mark"></span>
+                      </span>
+                      <span class="add-mark02 add-mark"></span>
+                      <span class="coin-icon">
+                        COIN
+                      </span>
+                      <span class="coin-icon icon01">
+                        <img src="/images/tools/en/eth.png" alt="" title="ETH">
+                      </span>
+                      <span class="coin-icon icon02">
+                        <img src="/images/tools/en/etc.png" alt="" title="ETC">
+                      </span>
+                    </div>
+    
+                    <div>
+                      <img src="/images/tools/en/tools04.jpg" alt="" width="388px">
+                    </div>
+                    <div class="info-box">
+                      <h3>ETH/ETC A/N Card Mining V2.84</h3>
+                      <div class="text-box">
+                        <div class="text-box-inner">
+                          <p>ETH/ETC GPU Card decide the Speed, Motherboard, Electricity Consumption and the Stability of Miners.</p>
+                          <p><a href="/download/tools/ETH_ETC-en.docx" class="light-text">ETH/ETC Mining Manual</a></p>
+                        </div>
+                      </div>
+                      <div class="over-mark"></div>
+                    </div>
+                    <div class="btn-box">
+                      <button type="button" class="btn btn-default" onclick="downETH();">Download</button>
+                    </div>
+                  </div>
+    
+                  <div class="tool-box box">
+    
+                    <div class="add-mark-box">
+                      <span class="add-mark01 add-mark">
+                        <span class="dot-mark"></span>
+                      </span>
+                      <span class="add-mark02 add-mark"></span>
+                      <span class="coin-icon">
+                        COIN
+                      </span>
+                      <span class="coin-icon icon01">
+                        <img src="/images/tools/en/zec.png" alt="" title="ZEC">
+                      </span>
+                    </div>
+    
+                    <div>
+                      <img src="/images/tools/en/tools05.jpg" alt="" width="388px">
+                    </div>
+                    <div class="info-box">
+                      <h3>ZEC A/N Card CPU Mining V1.0</h3>
+                      <div class="text-box">
+                        <div class="text-box-inner">
+                          <p>ZEC GPU ( A, N cards) or CPU,A card is high efficient, N card consumes low electricity, CPU card is low efficient.</p>
+                         <!-- <p><a href="" class="light-text">ZECMining Manual</a></p> -->
+                        </div>
+                      </div>
+                      <div class="over-mark"></div>
+                    </div>
+                    <div class="btn-box three">
+                      <button type="button" class="btn btn-default" onclick="downAcard();">Download A card</button>
+                      <button type="button" class="btn btn-default" onclick="downNcard();">Download N card</button>
+                      <button type="button" class="btn btn-default" onclick="downCPUcard();">Download CPU</button>
+                    </div>
+                  </div>
+
+                  <div class="tool-box box">
+
+                    <div class="add-mark-box">
+                      <span class="add-mark01 add-mark">
+                        <span class="dot-mark"></span>
+                      </span>
+                      <span class="add-mark02 add-mark"></span>
+                      <span class="coin-icon">
+                        COIN
+                      </span>
+                      <span class="coin-icon icon01">
+                    <img src="/images/tools/btc.png" alt="" title="BTC">
+                  </span>
+                      <span class="coin-icon icon02">
+                    <img src="/images/tools/bch.png" alt="" title="BCH">
+                  </span>
+                      <span class="coin-icon icon03">
+                    <img src="/images/tools/ltc.png" alt="" title="LTC">
+                  </span>
+                      <span class="coin-icon icon04">
+                    <img src="/images/tools/dash.png" alt="" title="DASH">
+                  </span>
+                      <span class="coin-icon icon05">
+                    <img src="/images/tools/zec.png" alt="" title="ZEC">
+                  </span>
+                      <span class="coin-icon icon06">
+                    <img src="/images/tools/eth.png" alt="" title="ETH">
+                  </span>
+                      <span class="coin-icon icon07">
+                    <img src="/images/tools/etc.png" alt="" title="ETC">
+                  </span>
+                      <span class="coin-icon icon08">
+                    <img src="/images/tools/sc.png" alt="" title="SC">
+                  </span>
+                      <span class="coin-icon icon09">
+                    <img src="/images/tools/xmc.png" alt="" title="XMC">
+                  </span>
+                      <span class="coin-icon icon10">
+                    <img src="/images/tools/btm.png" alt="" title="BTM">
+                  </span>
+                    </div>
+
+                    <div>
+                      <img src="/images/tools/en/tools06.jpg" alt="" width="388px">
+                    </div>
+                    <div class="info-box">
+                      <h3>APConnectivity V1.0.0</h3>
+                      <div class="text-box">
+                        <div class="text-box-inner">
+                          <p>This tool can help to detect instability and provide logs for further troubleshooting.</p>
+                          <p><a href="/download/tools/006-APConnectivity-en.pdf" class="light-text">APConnectivity Manual</a></p>
+                        </div>
+                      </div>
+                      <div class="over-mark"></div>
+                    </div>
+                    <div class="btn-box">
+                      <button type="button" class="btn btn-default" onclick="downConnectivity();">Download</button>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+    
+            </div>
+          </div>
+          <!-- toolsPage end -->
+		</section>
+	</div>
+	
+<script src="/js/user/jquery.placeholder.js"></script>
+<script src="/js/user/jquery.bootstrap.min.js"></script>
+<link rel="stylesheet" href="/css/spit.css">
+</body>
+<script type="text/javascript">
+    function downMonitor(){
+        location.href="/download/tools/APMinerTool_V1.0.6.zip";
+    }
+    function downIPConfig(){
+        location.href="/download/tools/IP_Reporter_IP_Tools.zip";
+    }
+    function downETH(){
+        location.href="/download/tools/eth_etcV2.84-en.zip";
+    }
+    function downAcard(){
+        location.href="/download/tools/ZEC_A.zip";
+    }
+    function downNcard(){
+        location.href="/download/tools/ZEC_N.zip";
+    }
+    function downCPUcard(){
+        location.href="/download/tools/ZEC_CPU.zip";
+    }
+    function downConnectivity(){
+        location.href="/download/tools/APConnectivity_V1.0.0.zip";
+    }
+
+</script>
+</html>
