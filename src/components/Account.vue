@@ -116,16 +116,15 @@
             submitForm (formName) {
                 this.$refs[formName].validate((valid) => {
                     if (valid) {
-                        const router = this.$router;
-                        router.push({path: routerMapping[index]});
+                        // const router = this.$router;
+                        // router.push({path: routerMapping[index]});
                         if (this.currentTab === 'login') {
                             login(this.login).then(result => {
 
-                            })
+                            });
                         } else {
                             register(this.register);
                         }
-                        
                     } else {
                         return false;
                     }
